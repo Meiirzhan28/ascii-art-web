@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ascii-art-web</title>
+  <style>
+    form {text-align: center;} /* чтобы все было в центре */
+    p {text-align: center;}
+    div {text-align: center;}
+    h1 {text-align: center;}
+    select {text-align: center;}
+    a{
+      text-decoration: none;
+      color: green;
+    }
+	  body {
+    /* background: rgb(20, 75, 72); Цвет фона */
+    min-height: 100vh;
+    background: linear-gradient(125deg, green, white);
+    
+   }
+   .container{
+	display: block;
+	width: 700px;
+	padding: 21px;
+	margin-top: 50px;
+	overflow: auto;
+	overflow-y: hidden;
+	background: #efefef;
+	border: 1px solid rgb(180, 180, 180);
+	margin-left: auto;
+	margin-right: auto;
+    background-color: white;
+}
+
+  </style>
+</head>  
+<body> 
+ </a>
+  <a href="/"><h1>Ascii-art-web</h1>  </a>
+  <form method="post" action="/ascii-art" >
+    <div class = "box">
+      <textarea name = "input" placeholder="Input text" style="width: 600px; height: 200px;" required="input"></textarea>
+    </div>
+    <br><br>
+    <label>Choose:</label>  
+    <select name="textstyle" id="textstyle">
+        <option  value="standard">standard</option>
+        <option  value="shadow">shadow</option>
+        <option  value="thinkertoy">thinkertoy</option>
+      </optgroup>
+    </select> 
+    <br><br>
+    <input type="submit" value = "Submit"size="100"/>
+    <input type="reset" value = "Reset"size="100"/>
+    <br><br>
+  </form>
+  <div class="container">
+    <pre>{{ .Name}}</pre> 
+  </div>
+</body>
+</html>
